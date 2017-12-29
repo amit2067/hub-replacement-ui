@@ -6,13 +6,10 @@
 
 <link rel="stylesheet" type="text/css"
 	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
-
 <link rel="stylesheet" th:href="@{/css/main.css}"
 	href="../../css/main.css" />
-
 <link rel="stylesheet" th:href="@{/css/slc.min.css}"
 	href="../../css/slc.min.css" />
-
 <link rel="stylesheet" th:href="@{/css/slc-lean-portal.css}"
 	href="../../css/slc-lean-portal.css" />
 
@@ -236,48 +233,61 @@
 		</div>
 		<div class="clear"></div>
 
-		<div id="MainContainer" ng-controller="leanPortalAppController"
+		<div id="MainContainer" ng-controller="AddCustomerController"
 			style="padding-top: 3%; padding-bottom: 3%;">
 
 			<div id="invalidCredentials" class="body-text"
-				style="padding-bottom: 2%; color: red; display: none;">The Email Address or
-				Password, you have entered, is not correct</div>
+				style="padding-bottom: 2%; color: red; display: none;">The
+				Email Address or Password, you have entered, is not correct</div>
 			<div id="blankField" class="body-text"
-				style="padding-bottom: 2%; color: red; display: none;">
-				Please enter all the fields	below.</div>
+				style="padding-bottom: 2%; color: red; display: none;">Please
+				enter all the fields below.</div>
 
 			<div id="header-text" class="header-text">Add a new Customer</div>
 
-			<div id="EmailSection" style="padding-top: 30px;">
-				<div id="EmailAddressTxt" class="body-text left width200">Email
-					Address</div>
-				<div id="EmailAddressTxtFieldSection" class="left"
+			<div id="FirstNameSection" style="padding-top: 30px;">
+				<div id="FirstNameTxt" class="body-text left width200">First
+					Name</div>
+				<div id="FirstNameTxtFieldSection" class="left"
 					style="padding-left: 50px;">
-					<input type="text" id="EmailAddressTxtField" name="emailAdress"
-						ng-model="emailAddress"/>
+					<input type="text" id="FirstNameTxtField" name="firstName"
+						ng-model="firstName" />
 				</div>
 				<div class="clear"></div>
 			</div>
 
-			<div id="PasswordSection" style="padding-top: 30px;">
-				<div id="PasswordTxt" class="body-text left width200">Password</div>
-				<div id="PasswordTxtFieldSection" class="left"
+			<div id="LastNameSection" style="padding-top: 30px;">
+				<div id="LastNameSectionTxt" class="body-text left width200">Last
+					Name</div>
+				<div id="LastNameSectionTxtFieldSection" class="left"
 					style="padding-left: 50px;">
-					<input type="password" id="PasswordTxtField" name="password"
-						ng-model="userPassword"/>
+					<input type="text" id="LastNameSectionTxtField" name="lastName"
+						ng-model="lastName" />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div id="EmailAddressSection" style="padding-top: 30px;">
+				<div id="EmailAddressSectionTxt" class="body-text left width200">Email
+					Address</div>
+				<div id="EmailAddressSectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" id="EmailAddressSectionTxtField"
+						name="emailAddress" ng-model="emailAddress" />
 				</div>
 				<div class="clear"></div>
 			</div>
 
 			<div id="ButtonSection"
 				style="padding-top: 30px; padding-left: 50px;">
-				<div id="LogInButtonSection" class="left" ng-click="login()">
-					<input type="button" value="Log In"
-						class="btn btn-success custom-width"/>
+				<div id="CreateCustomerButtonSection" class="left"
+					ng-click="createCustomer()">
+					<input type="button" value="Create Customer"
+						class="btn btn-success custom-width" />
 				</div>
 				<div id="ResetButtonSection" class="left"
 					style="padding-left: 50px;">
-					<input type="button" value="Reset" class="btn btn-primary btn-sm"/>
+					<input type="button" value="Reset" class="btn btn-primary btn-sm" />
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -291,7 +301,7 @@
 		<div id="slc-footer">
 			<div id="footer" class="clearfix">
 				<p>
-					<em>delivered by the</em> <br/>Student Loans Company
+					<em>delivered by the</em> <br />Student Loans Company
 				</p>
 				<ul>
 					<li><a href="http://www.slc.co.uk/contact.aspx"
@@ -318,15 +328,10 @@
 	</div>
 
 	<script type="text/javascript" src="../../js/angular.min.js"></script>
-
 	<script type="text/javascript" src="../../js/angular-route.js"></script>
-	
 	<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
-
 	<script type="text/javascript" src="../../js/overlay.js"></script>
-
 	<script type="text/javascript" src="../../js/slc.min.js"></script>
-
 	<script type="text/javascript" src="../../js/slc-lean-portal.js"></script>
 
 </body>
