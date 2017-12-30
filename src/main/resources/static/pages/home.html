@@ -4,8 +4,7 @@
 <title>Add Customer Form</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<link rel="stylesheet" type="text/css"
-	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../../css/bootstrap.min.css" />
 <link rel="stylesheet" href="../../css/main.css" />
 <link rel="stylesheet" href="../../css/slc.min.css" />
 <link rel="stylesheet" href="../../css/hub-replace-ui.css" />
@@ -116,9 +115,8 @@
 					</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a
-								href="http://www.slc.co.uk/students-and-customers/parents-and-partners-of-students.aspx"
-								title="Students and customers">Parents and partners of
-									students</a></li>
+								href="http://localhost:9082/pages/home.html"
+								title="Students and customers">Add a new Customer</a></li>
 							<li><a
 								href="http://www.slc.co.uk/students-and-customers/students-from-england.aspx"
 								title="Students and customers">Students from England</a></li>
@@ -230,71 +228,9 @@
 		</div>
 		<div class="clear"></div>
 
-		<div id="MainContainer" ng-controller="hubReplaceUIAppController"
-			style="padding-top: 3%; padding-bottom: 3%;">
-			
-			<div id="blankField" class="body-text"
-				style="padding-bottom: 2%; color: red;" ng-show="isFieldsEmpty">Please
-				provide all mandatory fields.</div>
-
-			<div id="header-text" class="header-text">Add a new Customer</div>
-
-            <form name="addCustomerForm" ng-submit="createCustomer()" novalidate="true"> 
-			<div id="FirstNameSection" style="padding-top: 30px;">
-				<div id="FirstNameTxt" class="body-text left width200">First
-					Name</div>
-				<div id="FirstNameTxtFieldSection" class="left"
-					style="padding-left: 50px;">
-					<input type="text" ng-class="{ errorinput: isFieldsEmpty}"
-					    id="FirstNameTxtField" name="firstName"
-						ng-model="firstName" placeholder="First Name" />
-				</div>
-				<div class="clear"></div>
-			</div>
-
-			<div id="LastNameSection" style="padding-top: 30px;">
-				<div id="LastNameSectionTxt" class="body-text left width200">Last
-					Name</div>
-				<div id="LastNameSectionTxtFieldSection" class="left"
-					style="padding-left: 50px;">
-					<input type="text" ng-class="{ errorinput: isFieldsEmpty}" 
-					 id="LastNameSectionTxtField" name="lastName"
-						ng-model="lastName" placeholder="Last Name" />
-				</div>
-				<div class="clear"></div>
-			</div>
-
-			<div id="EmailAddressSection" style="padding-top: 30px;">
-				<div id="EmailAddressSectionTxt" class="body-text left width200">Email
-					Address</div>
-				<div id="EmailAddressSectionTxtFieldSection" class="left"
-					style="padding-left: 50px;">
-					<input type="text" ng-class="{ errorinput: isFieldsEmpty}" 
-					      id="EmailAddressSectionTxtField"
-						name="emailAddress" ng-model="emailAddress" placeholder="Email Address" />
-				</div>
-				<div class="clear"></div>
-			</div>
-
-			<div id="ButtonSection"
-				style="padding-top: 30px; padding-left: 50px;">
-				<div id="CreateCustomerButtonSection" class="left">
-					<input type="submit" value="Create Customer"
-						class="btn btn-success custom-width" />
-				</div>
-				<div id="ResetButtonSection" class="left"
-					style="padding-left: 50px;">
-					<input type="button" value="Reset" class="btn btn-primary btn-sm" />
-				</div>
-				<div class="clear"></div>
-			</div>
-			</form>
-			<div id="ProcessingOverlay" style="display: none;">
-				<div class="processingoverlay"></div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="clear"></div>
+		
+		<div class="ng-view"></div>
+		
 
 		<div id="slc-footer">
 			<div id="footer" class="clearfix">

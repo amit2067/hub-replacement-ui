@@ -1,5 +1,7 @@
 .header-text {
 	font-size: 1.5em;
+	border-bottom: 1px solid palevioletred;
+	padding-bottom: 1%;
 }
 
 .body-text {
@@ -107,4 +109,22 @@ td {
 td.alt {
 	background: #F5FAFA;
 	color: #B4AA9D;
+}
+.errorinput {
+color: #850000;
+background: rgba(254, 186, 186, 0.5);
+border: 1px solid #850000;
+}
+
+.customerCreatedOverlay {
+	width: 500px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 30px black;
+    font-family: Arial;
+    font-size: 1.2em;
+    padding-left: 50px;
+    padding-top: 40px;
+    background-color: darkgray;
 }
