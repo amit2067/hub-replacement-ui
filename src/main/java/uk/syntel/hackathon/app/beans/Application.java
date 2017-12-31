@@ -4,12 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Application {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "APP_SEQ")
+    @SequenceGenerator(sequenceName = "application_seq", allocationSize = 1, name = "APP_SEQ")
 	private Long id;
 	private Long customerId;
 	private String heiCode;
