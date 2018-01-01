@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>uk.syntel.hackathon</groupId>
-	<artifactId>hub-replacement-ui</artifactId>
+	<artifactId>hub-replacement-ui-la-portal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 

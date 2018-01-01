@@ -1,15 +1,15 @@
-package uk.syntel.hackathon.app.service;
+package uk.syntel.hackathon.laportal.app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import uk.syntel.hackathon.app.beans.Application;
-import uk.syntel.hackathon.app.beans.Customer;
-import uk.syntel.hackathon.app.repository.ApplicationRepository;
-import uk.syntel.hackathon.app.repository.CustomerRepository;
+import uk.syntel.hackathon.laportal.app.beans.Application;
+import uk.syntel.hackathon.laportal.app.beans.Customer;
+import uk.syntel.hackathon.laportal.app.repository.ApplicationRepository;
+import uk.syntel.hackathon.laportal.app.repository.CustomerRepository;
 
 @Service
-public class HubReplacementUIService {
+public class LaPortalService {
 
 	@Autowired
 	private CustomerRepository customerRepository;

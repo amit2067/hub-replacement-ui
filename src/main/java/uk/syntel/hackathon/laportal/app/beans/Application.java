@@ -1,4 +1,4 @@
-package uk.syntel.hackathon.app.beans;
+package uk.syntel.hackathon.laportal.app.beans;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

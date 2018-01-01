@@ -1,4 +1,4 @@
-package uk.syntel.hackathon.app;
+package uk.syntel.hackathon.laportal.app;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

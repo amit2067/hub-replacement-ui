@@ -1,19 +1,19 @@
-package uk.syntel.hackathon.app.controller;
+package uk.syntel.hackathon.laportal.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import uk.syntel.hackathon.app.beans.Application;
-import uk.syntel.hackathon.app.beans.Customer;
-import uk.syntel.hackathon.app.service.HubReplacementUIService;
+import uk.syntel.hackathon.laportal.app.beans.Application;
+import uk.syntel.hackathon.laportal.app.beans.Customer;
+import uk.syntel.hackathon.laportal.app.service.LaPortalService;
 
 @RestController
-public class HubReplacementUIController {
+public class LaPortalController {
 
 	@Autowired
-	HubReplacementUIService service;
+	LaPortalService service;
 
 	@PostMapping("/createCustomer")
 	public Customer createCustomer(@RequestBody Customer customer) {

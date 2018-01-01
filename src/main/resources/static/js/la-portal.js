@@ -1,21 +1,21 @@
-var hubReplaceUIApp = angular.module('hubReplaceUIApp', [ 'ngRoute']);
+var laPortalApp = angular.module('laPortalApp', [ 'ngRoute']);
 
-hubReplaceUIApp.config([ '$routeProvider', function($routeProvider) {
+laPortalApp.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider.when('/addNewCustomer', {
-		templateUrl : 'addNewCustomer.html',
-		controller : 'hubReplaceUIAppController'
+		templateUrl : 'laPortalAddCust.html',
+		controller : 'laPortalAppController'
 	}).when('/createApplication', {
-		templateUrl : 'createApplication.html',
-		controller : 'hubReplaceUIAppController'
+		templateUrl : 'laPortalCreateApp.html',
+		controller : 'laPortalAppController'
 	}).otherwise({
-		templateUrl : 'addNewCustomer.html',
-		controller : 'hubReplaceUIAppController'
+		templateUrl : 'laPortalAddCust.html',
+		controller : 'laPortalAppController'
 	});
 } ]);
 
-hubReplaceUIApp
+laPortalApp
 .factory(
-		'hubReplaceUIService',
+		'laPortalService',
 		[
 				'$http',
 				'$q',
@@ -48,7 +48,7 @@ hubReplaceUIApp
 					};
 				} ]);
 
-hubReplaceUIApp.factory('dataService', function() {
+laPortalApp.factory('dataService', function() {
 	 var savedData = {}
 	 function set(data) {
 	   savedData = data;
@@ -63,8 +63,8 @@ hubReplaceUIApp.factory('dataService', function() {
 	 }
 	});
 
-hubReplaceUIApp.controller('hubReplaceUIAppController',['$scope', 'hubReplaceUIService','dataService', 
-	function($scope, hubReplaceUIService, dataService) {
+laPortalApp.controller('laPortalAppController',['$scope', 'laPortalService','dataService', 
+	function($scope, laPortalService, dataService) {
 
 	$scope.selectedHEI = "Select";
 	$scope.selectedCourse = "Select";
@@ -127,7 +127,7 @@ hubReplaceUIApp.controller('hubReplaceUIAppController',['$scope', 'hubReplaceUIS
 	    		phoneNumber : phoneNumber
 	    };
 	    showOverLay('ProcessingOverlay',true, 6000);
-	    hubReplaceUIService.createCustomer(customer).then(
+	    laPortalService.createCustomer(customer).then(
 		    function(data) {
 		    	$scope.customerId = data.id;
 		    	dataService.set(data);
@@ -159,12 +159,12 @@ hubReplaceUIApp.controller('hubReplaceUIAppController',['$scope', 'hubReplaceUIS
 	
 	$scope.no = function() {
 		showOverLay('CustomerCreatedOverlay',false, 6000);
-		location.href = "http://localhost:9082/pages/home.html";
+		location.href = "http://localhost:9082/pages/laPortalHome.html";
 	}
 	
 	$scope.ok = function() {
 		showOverLay('ApplicationCreatedOverlay',false, 6000);
-		location.href = "http://localhost:9082/pages/home.html";
+		location.href = "http://localhost:9082/pages/laPortalHome.html";
 	}
 	
 	$scope.createApplication = function () {
@@ -195,7 +195,7 @@ hubReplaceUIApp.controller('hubReplaceUIAppController',['$scope', 'hubReplaceUIS
 	    		mlAmount : mlAmount
 	    };
 	    showOverLay('ProcessingOverlay',true, 6000);
-	    hubReplaceUIService.createApplication(application).then(
+	    laPortalService.createApplication(application).then(
 		    function(data) {
 		    	$scope.applicationId = data.id;
 		    	console.log("application creation successful");
