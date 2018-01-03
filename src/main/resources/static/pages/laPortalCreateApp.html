@@ -1,5 +1,5 @@
 <div id="MainContainer" ng-controller="laPortalAppController"
-	style="padding-top: 3%; padding-bottom: 3%;">
+	class="mainContainer">
 
 	<div id="blankField" class="body-text"
 		style="padding-bottom: 2%; color: red;" ng-show="isAppFieldsEmpty">Please
@@ -96,7 +96,7 @@
 	</div>
 	<div id="ApplicationCreatedOverlay" style="display: none;">
 		<div class="customerCreatedOverlay">
-			<div>Application has been created successfully with id {{applicationId}}</div>
+			<div>Application has been created - Id {{applicationId}}</div>
 			<div id="appOverlayButtonSection" style="padding-top: 30px; padding-left: 80px;">
 				 <div id="OkButtonSection" class="left" ng-click="ok()">
 				   <input type="button" value="OK"
