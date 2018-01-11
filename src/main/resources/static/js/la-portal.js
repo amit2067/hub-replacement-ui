@@ -124,7 +124,8 @@ laPortalApp.controller('laPortalAppController',['$scope', 'laPortalService','dat
 	    		addressLine2 : addressLine2,
 	    		city: city,
 	    		postalCode : postalCode,
-	    		phoneNumber : phoneNumber
+	    		phoneNumber : phoneNumber,
+	    		createdBy : 'LaPortal'
 	    };
 	    showOverLay('ProcessingOverlay',true, 6000);
 	    laPortalService.createCustomer(customer).then(
@@ -192,7 +193,9 @@ laPortalApp.controller('laPortalAppController',['$scope', 'laPortalService','dat
 	    		courseCode: courseCode,
 	    		courseYear : courseYear,
 	    		tflAmount : tflAmount,
-	    		mlAmount : mlAmount
+	    		mlAmount : mlAmount,
+	    		createdBy : 'LaPortal',
+	    		confirmedAtnInd : 'N'
 	    };
 	    showOverLay('ProcessingOverlay',true, 6000);
 	    laPortalService.createApplication(application).then(
