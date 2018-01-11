@@ -134,3 +134,9 @@ border: 1px solid #850000;
     background-color: gainsboro;
     padding-left: 10%;
 }
+.headerText {
+	padding-left: 40%;
+	padding-top: 5%;
+	font-size: 2em;
+	font-family: inherit;
+}
