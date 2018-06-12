@@ -54,17 +54,22 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Oracle JDBC driver -->
-		<dependency>
+<!-- 		 Oracle JDBC driver -->
+		<!-- <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc14</artifactId>
 			<version>10.2.0.4.0</version>
-		</dependency>
+		</dependency> -->
 
-		<!-- HikariCP connection pool -->
-		<dependency>
+<!-- 		HikariCP connection pool -->
+		<!-- <dependency>
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
+		</dependency> -->
+		
+		<dependency>
+		 <groupId>com.h2database</groupId>
+		 <artifactId>h2</artifactId>
 		</dependency>
 		
 		<dependency>

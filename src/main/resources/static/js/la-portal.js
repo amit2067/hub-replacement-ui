@@ -23,7 +23,7 @@ laPortalApp
 					return {
 						createCustomer : function(customer) {
 							return $http
-									.post('http://localhost:9082/createCustomer', customer)
+									.post('/createCustomer', customer)
 									.then(
 											function(response) {
 												return response.data;
@@ -35,7 +35,7 @@ laPortalApp
 						},
 						createApplication : function(application) {
 							return $http
-									.post('http://localhost:9082/createApplication', application)
+									.post('/createApplication', application)
 									.then(
 											function(response) {
 												return response.data;
@@ -160,12 +160,12 @@ laPortalApp.controller('laPortalAppController',['$scope', 'laPortalService','dat
 	
 	$scope.no = function() {
 		showOverLay('CustomerCreatedOverlay',false, 6000);
-		location.href = "http://localhost:9082/pages/laPortalHome.html";
+		location.href = "/pages/laPortalHome.html";
 	}
 	
 	$scope.ok = function() {
 		showOverLay('ApplicationCreatedOverlay',false, 6000);
-		location.href = "http://localhost:9082/pages/laPortalHome.html";
+		location.href = "/pages/laPortalHome.html";
 	}
 	
 	$scope.createApplication = function () {
